@@ -1,11 +1,20 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import AppMockScreen from '@shared/components/app-mock-screen/AppMockScreen';
+import {Button} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {signIn} from '@services/slices/authSlice';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@navigation/Navigation';
 
-function SignInScreen(): JSX.Element {
+type Props = NativeStackScreenProps<RootStackParamList, 'SignIn'>;
+
+function SignInScreen({navigation}: Props): JSX.Element {
+  const dispatch = useDispatch();
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Sign In Screen</Text>
-    </View>
+    <AppMockScreen name="Sign In Screen">
+      <Button title="log in" onPress={() => dispatch(signIn())} />
+      <Button title="register" onPress={() => navigation.navigate('SignUp')} />
+    </AppMockScreen>
   );
 }
 
