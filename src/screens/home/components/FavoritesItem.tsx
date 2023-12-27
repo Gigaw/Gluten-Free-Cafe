@@ -1,11 +1,9 @@
 import {View, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import AppText from '@shared/components/app-text/AppText';
-import Spacer from '@shared/components/spacer/Spacer';
 import {COLORS} from '@shared/constants/colors';
-import {CARDS_SHADOWS} from '@shared/constants/styles';
 
-const PromotedItem = () => {
+const FavoritesItem = () => {
   return (
     <View style={styles.container}>
       <Image
@@ -14,32 +12,36 @@ const PromotedItem = () => {
         }}
         style={styles.image}
       />
-      {/* <Spacer size={10} /> */}
       <View style={styles.infoContainer}>
-        <AppText h3 bold style={styles.name}>
+        <AppText h4 style={styles.name}>
           Pizza
         </AppText>
-        <AppText h3 bold>
-          20$
-        </AppText>
+        <AppText h4>20$</AppText>
       </View>
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
+    width: 100,
     backgroundColor: COLORS.HOME_CARDS_BG,
     borderRadius: 10,
-    ...CARDS_SHADOWS,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.51,
+    shadowRadius: 13.16,
+    elevation: 20,
   },
   image: {
-    height: 200,
+    height: 70,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
   },
   infoContainer: {
-    padding: 10,
+    padding: 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -48,4 +50,4 @@ const styles = StyleSheet.create({
   },
   price: {},
 });
-export default PromotedItem;
+export default FavoritesItem;
