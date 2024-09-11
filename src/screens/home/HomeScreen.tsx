@@ -1,9 +1,14 @@
 import AppScreen from '@shared/components/app-screen/AppScreen';
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import Banner from './components/Banner';
-import Special from './components/Special';
 import Spacer from '@shared/components/spacer/Spacer';
+import Special from './components/Special';
+import Categories from './components/Categories';
+// import Banner from './components/Banner';
+// import Special from './components/Special';
+// import Spacer from '@shared/components/spacer/Spacer';
+// import Categories from './components/Categories';
+// import Spacer from '@shared/components/spacer/Spacer';
 
 function HomeScreen(): JSX.Element {
   return (
@@ -12,10 +17,9 @@ function HomeScreen(): JSX.Element {
       <Spacer />
       <Special />
       <Spacer />
+      <Categories />
     </AppScreen>
   );
 }
-
-const style = StyleSheet.create({});
 
 export default HomeScreen;

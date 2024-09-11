@@ -2,9 +2,10 @@ import React from 'react';
 import AppMockScreen from '@shared/components/app-mock-screen/AppMockScreen';
 import {Button} from 'react-native';
 import {useDispatch} from 'react-redux';
-import {signIn} from '@services/slices/authSlice';
+// import {signIn} from '@services/slices/authSlice';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@navigation/Navigation';
+import {signIn} from '@services/slices/authSlice';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SignIn'>;
 

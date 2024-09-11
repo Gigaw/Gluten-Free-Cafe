@@ -52,12 +52,11 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 7,
+      height: 2,
     },
-    shadowOpacity: 0.43,
-    shadowRadius: 9.51,
-
-    elevation: 15,
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
   },
   button: {
     backgroundColor: COLORS.PRIMARY_COLOR,
@@ -78,8 +77,8 @@ const styles = StyleSheet.create({
   favorite: {
     fontSize: 30,
     position: 'absolute',
-    top: 10,
-    left: 10,
+    top: 5,
+    left: 0,
     zIndex: 2,
   },
   label: {
@@ -87,8 +86,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     paddingHorizontal: 10,
     paddingVertical: 3,
-    top: 10,
-    right: 10,
+    top: 5,
+    right: 5,
     zIndex: 2,
     borderRadius: 10,
   },

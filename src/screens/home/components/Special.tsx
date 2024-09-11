@@ -1,20 +1,14 @@
-import {View, StyleSheet, Pressable, FlatList} from 'react-native';
+import {View, StyleSheet, Pressable} from 'react-native';
 import React from 'react';
 import AppText from '@shared/components/app-text/AppText';
 import ProductItem from '@shared/components/product-item/ProductItem';
 import Spacer from '@shared/components/spacer/Spacer';
-import FlatGrid from 'react-native-super-grid';
+import {FlatGrid} from 'react-native-super-grid';
+import HomeSection from './HomeSection';
 
 const Special = () => {
   return (
-    <View>
-      <View style={styles.topWrapper}>
-        <AppText h3>Special</AppText>
-        <Pressable>
-          <AppText h4>View All</AppText>
-        </Pressable>
-      </View>
-      <Spacer size={10} />
+    <HomeSection name="Special" onPress={() => null}>
       <FlatGrid
         itemDimension={130}
         data={[1, 2]}
@@ -22,7 +16,7 @@ const Special = () => {
         scrollEnabled={false}
         numColumns={2}
       />
-    </View>
+    </HomeSection>
   );
 };
 
